@@ -7,31 +7,31 @@ flowchart LR
     Admin((Admin))
 
     subgraph Identificacao["Identificação de Plantas"]
-        UC1[Identificar planta por imagem]
-        UC2[Ativar localização para\nrecomendação climática]
-        UC3[Visualizar resultado\n(sucesso/falha)]
-        UC4[Receber recomendações\nde cuidado]
+        UC1["Identificar planta por imagem"]
+        UC2["Ativar localização para recomendação climática"]
+        UC3["Visualizar resultado: sucesso ou falha"]
+        UC4["Receber recomendações de cuidado"]
     end
 
     subgraph Conta["Conta e Perfil"]
-        UC5[Cadastrar-se]
-        UC6[Fazer login]
-        UC7[Recuperar senha]
-        UC8[Definir/editar interesses\ne preferências]
+        UC5["Cadastrar-se"]
+        UC6["Fazer login"]
+        UC7["Recuperar senha"]
+        UC8["Definir ou editar interesses e preferências"]
     end
 
     subgraph FeedSocial["Feed e Interação Social"]
-        UC9[Visualizar feed]
-        UC10[Ver publicação própria\ngerada por identificação]
-        UC11[Ver publicações de outros\nusuários (dados bloqueados\nse deslogado)]
-        UC12[Criar publicação manual]
-        UC13[Acessar contato/endereço\nde outro usuário]
-        UC14[Enviar mensagem\n(inbox/contatos)]
+        UC9["Visualizar feed"]
+        UC10["Ver publicação própria gerada por identificação"]
+        UC11["Ver publicações de outros usuários com dados bloqueados se deslogado"]
+        UC12["Criar publicação manual"]
+        UC13["Acessar contato ou endereço de outro usuário"]
+        UC14["Enviar mensagem via inbox de contatos"]
     end
 
     subgraph Administracao["Administração"]
-        UC15[Moderar publicações]
-        UC16[Gerenciar usuários]
+        UC15["Moderar publicações"]
+        UC16["Gerenciar usuários"]
     end
 
     Visitante --> UC1
