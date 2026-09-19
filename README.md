@@ -121,16 +121,14 @@ O diferencial do FloraHub em relação aos concorrentes (apps de identificação
 
 ## 6. Diagramas
 
-Esta seção deve ser atualizada conforme os diagramas forem produzidos e versionados no repositório.
+Os diagramas são escritos em [Mermaid](https://mermaid.js.org/) (texto versionável, renderizado automaticamente pelo GitHub) e ficam na pasta [diagramas/](diagramas/). São uma primeira versão conceitual, a ser refinada ao longo do desenvolvimento.
 
 | Diagrama | Descrição | Status |
 |---|---|---|
-| Diagrama de Casos de Uso | Interações entre Usuário/Visitante/Admin e o sistema (identificar planta, cadastrar-se, visualizar feed, editar preferências, etc.). | A produzir |
-| Diagrama de Classes | Estrutura de Planta, Recomendação, Usuário, Admin, Publicação e seus relacionamentos. | A produzir |
-| Diagrama de Sequência | Fluxo de identificação de planta (usuário → app → API de IA → OpenWeather → resposta). | A produzir |
-| Diagrama de Atividades | Fluxo de navegação do usuário desde as telas de boas-vindas até a publicação no feed. | A produzir |
-
-> Sugestão de organização: salvar os arquivos-fonte (ex.: `.drawio`, `.puml`) e as exportações (`.png`/`.svg`) em uma pasta `diagramas/` na raiz do repositório, versionando ambos.
+| [Diagrama de Casos de Uso](diagramas/caso-de-uso.md) | Interações entre Usuário/Visitante/Admin e o sistema (identificar planta, cadastrar-se, visualizar feed, editar preferências, etc.). | Rascunho inicial |
+| [Diagrama de Classes](diagramas/classes.md) | Estrutura de Planta, Recomendação, Usuário, Admin, Publicação e seus relacionamentos. | Rascunho inicial |
+| [Diagrama de Sequência](diagramas/sequencia.md) | Fluxo de identificação de planta (usuário → app → API de IA → OpenWeather → resposta) e fluxo de acesso a dados bloqueados. | Rascunho inicial |
+| [Diagrama de Atividades](diagramas/atividades.md) | Fluxo de navegação do usuário desde as telas de boas-vindas até a publicação no feed. | Rascunho inicial |
 
 ---
 
