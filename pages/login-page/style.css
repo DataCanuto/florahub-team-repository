@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+header {
+    background-color: whitesmoke;
+    padding: 12px 48px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+}
+
+header > img {
+    width: 32px;
+}
+
+header h1 {
+    color: rgb(212, 209, 17);
+    font-size: 22px;
+    
+}
+
+
+header span {
+    color: lab(68.84% -57.52 29.96);
+}
+
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 60px; 
+    color: #f0ca84; 
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background-color: #dcdcdc;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #333;
+}
+
+input::placeholder {
+    color: #444;
+}
+
+
+.input-password {
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.btn-grey {
+    background-color: #dcdcdc;
+    color: #333;
+}
+
+
+.btn-enter {
+    margin-bottom: 30px;
+}
+
+.btn-sign {
+    background-color: #f0ca84;
+    color: #324434;
+    font-weight: bold;
+}
+
+
+.forgot-link {
+    display: inline-block;
+    margin-top: 55px; 
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #333;
+    font-size: 12px;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 15px;
+}
