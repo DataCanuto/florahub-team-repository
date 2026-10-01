@@ -29,7 +29,7 @@ O diferencial do FloraHub em relação aos concorrentes (apps de identificação
 - Toda identificação vira uma publicação no feed, mesmo para visitantes não cadastrados (com informações sensíveis ocultadas até login).
 - O feed é ordenado por **proximidade geográfica** (quando o usuário ativa localização) ou por **interesses em comum** (quando não ativa), aproximando pessoas com contextos de cultivo parecidos.
 - O cadastro captura interesses (ex.: orquídeas, suculentas, roseiras, palmeiras), preferências de ambiente (jardim, apartamento, terraço, muita/pouca luz, muito/pouco tempo disponível) e experiência, alimentando tanto recomendações de cuidado quanto o algoritmo de aproximação social.
-- O uso é possível sem cadastro (modo visitante/logoff), com CTA natural para criação de conta no momento em que o usuário deseja mais informações (contato, endereço) de outra publicação.
+- O uso é possível sem cadastro (modo visitante/logoff), com CTA natural para criação de conta no momento em que o usuário deseja mais informações (perfil, contato) de outra publicação. O endereço de um usuário nunca é exibido a outro usuário, logado ou não.
 
 ---
 
@@ -42,8 +42,8 @@ O diferencial do FloraHub em relação aos concorrentes (apps de identificação
    - Em caso de sucesso: exibe os dados da planta identificada e recomendações; a publicação passa a existir no feed da homepage.
    - Em caso de falha: orienta o usuário a tentar novamente, mantendo o CTA para explorar a homepage.
 5. **Homepage (logoff ou logada)**: visualmente semelhante à tela de feed.
-   - **Logoff**: publicações aparecem com dados sensíveis (endereço, contato) bloqueados; ao tentar acessá-los, o usuário é conduzido ao fluxo de cadastro/login.
-   - **Logada**: feed completo, ordenado por proximidade e/ou interesses.
+   - **Logoff**: publicações mostram apenas a cidade e quantas pessoas há por perto; perfil e contato ficam bloqueados e, ao tentar acessá-los, o usuário é conduzido ao fluxo de cadastro/login.
+   - **Logada**: feed completo, ordenado por proximidade e/ou interesses. Usuários próximos aparecem com apelido, bairro, cidade e faixa de distância (ex.: "2 a 5 km"), nunca com endereço.
 6. **Feed**: agrega pesquisas/identificações realizadas nas últimas 24h.
    - Ordenação primária: proximidade geográfica com a pesquisa do próprio usuário (se localização ativada) ou por interesses em comum (se localização desativada).
    - Publicações de usuários próximos ao usuário aparecem no topo do feed, logo após a publicação do próprio usuário.
@@ -80,7 +80,7 @@ O diferencial do FloraHub em relação aos concorrentes (apps de identificação
 | RF09 | O feed deve exibir publicações das últimas 24 horas. |
 | RF10 | O feed deve ordenar publicações por proximidade geográfica quando o usuário tiver a localização ativada, ou por interesses em comum quando não tiver. |
 | RF11 | Publicações de usuários próximos devem ser priorizadas no feed, exibidas logo após a publicação do próprio usuário. |
-| RF12 | Para usuários não autenticados (logoff), informações sensíveis da publicação (endereço, contato) devem ser ocultadas. |
+| RF12 | O endereço de um usuário nunca deve ser exibido a outros usuários, autenticados ou não. Usuários autenticados veem quem está por perto (apelido, bairro, cidade e faixa de distância) ao realizar uma consulta ou publicação; visitantes (logoff) veem apenas a cidade e a quantidade de pessoas próximas. |
 | RF13 | Ao tentar acessar informações bloqueadas, o usuário deve ser direcionado ao fluxo de cadastro/login. |
 | RF14 | O sistema deve permitir cadastro de usuário com informações básicas de conta. |
 | RF15 | O sistema deve permitir, de forma opcional (durante ou após o cadastro), o preenchimento de interesses (ex.: orquídeas, suculentas, roseiras, palmeiras), preferências de ambiente (jardim, apartamento, terraço, luminosidade, disponibilidade de tempo) e nível de experiência. |
@@ -98,7 +98,7 @@ O diferencial do FloraHub em relação aos concorrentes (apps de identificação
 | RS01 | O sistema deve se comunicar com serviços externos (IA de identificação e OpenWeather) via requisições HTTP/API, tratando falhas de indisponibilidade com mensagens claras ao usuário (tela de falha). |
 | RS02 | O tempo de resposta da identificação deve ser comunicado ao usuário através de uma tela de carregamento (loading). |
 | RS03 | O acesso à localização do usuário deve ser opcional e solicitado explicitamente (consentimento). |
-| RS04 | Dados sensíveis de contato/endereço de usuários não autenticados no acesso não devem ser expostos a visitantes. |
+| RS04 | O sistema armazena o endereço completo e a localização exata de cada usuário, mas esses dados não devem ser expostos a nenhum outro usuário: o endereço deve ser cifrado no banco, nunca registrado em log, e a distância entre usuários deve ser exibida apenas em faixas, para impedir triangulação. |
 | RS05 | O sistema deve suportar uso sem autenticação (modo visitante), com persistência ao menos temporária do estado da navegação. |
 | RS06 | A arquitetura deve separar claramente frontend (app), backend (regras de negócio e integrações) e serviços externos de terceiros. |
 | RS07 | O sistema deve ser responsivo/mobile-first, considerando que o wireframe original ([digital-wireframe.png](assets/figma/wireframes/digital-wireframe.png)) foi desenhado para uso mobile. |
