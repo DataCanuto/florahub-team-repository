@@ -163,6 +163,12 @@ florahub-team-repository/
 
 O wireframe de referência está em [assets/figma/wireframes/digital-wireframe.png](assets/figma/wireframes/digital-wireframe.png).
 
+Demais artefatos de UX:
+
+- [assets/figma/low-fidelity-prototype/](assets/figma/low-fidelity-prototype/): as 12 telas do protótipo de baixa fidelidade (PNG).
+- [assets/figma/mockup/](assets/figma/mockup/): as 12 telas do protótipo de alta fidelidade (PNG) e o fluxo principal.
+- [assets/figma/high-fidelity-prototype/high-fidelity-prototype.pdf](assets/figma/high-fidelity-prototype/high-fidelity-prototype.pdf): protótipo de alta fidelidade completo, com arquitetura da informação, guia de estilo e regras de acesso.
+
 ---
 
 ## 8. Status do documento
